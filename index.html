@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insurance Price Forecasting</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="background">
+    <header class="navbar">
+      <div class="logo">
+        <h1>InsurePredict</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about" class="bookmark">About</a></li>
+          <li><a href="#features" class="bookmark">Features</a></li>
+          <li><a href="#insurance" class="bookmark">Insurance Types</a></li>
+          <li><a href="#contact" class="bookmark">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Accurate Insurance Price Forecasting</h2>
+        <p>Unlock the power of data to optimize pricing strategies and enhance decision-making.</p>
+        <button class="cta-button" onclick="scrollToSection('about')">Learn More</button>
+      </section>
+
+      <section id="about" class="content-section">
+        <h3>About Us</h3>
+        <p>We provide data-driven solutions for insurance companies to forecast prices with accuracy and transparency.
+          Our platform ensures fairness and compliance while delivering actionable insights.</p>
+      </section>
+
+      <section id="features" class="content-section">
+        <h3>Key Features</h3>
+        <div class="features-grid">
+          <div class="feature-card">
+            <img src="https://iili.io/25oSdgf.jpg" alt="Data Analysis">
+            <h4>Advanced Analytics</h4>
+            <p>Leverage machine learning models to forecast prices efficiently.</p>
+          </div>
+          <div class="feature-card">
+            <img src="https://iili.io/25ordga.jpg" alt="Risk Assessment">
+            <h4>Risk Assessment</h4>
+            <p>Identify high-risk profiles to optimize pricing strategies.</p>
+          </div>
+          <div class="feature-card">
+            <img src="https://iili.io/25o4luR.png" alt="Interactive Dashboard">
+            <h4>Interactive Dashboard</h4>
+            <p>Visualize insights through user-friendly graphs and charts.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="insurance" class="content-section">
+        <h3>Select Insurance Type</h3>
+        <p>Select the type of insurance and calculate your estimated insurance price.</p>
+        <form id="insurance-form">
+          <select id="insurance-type">
+            <option value="health">Health Insurance</option>
+            <option value="auto">Auto Insurance</option>
+            <option value="home">Home Insurance</option>
+          </select>
+          <button type="button" onclick="navigateToCalculator()">Go to Calculator</button>
+        </form>
+      </section>
+
+      <section id="contact" class="content-section">
+        <h3>Contact Us</h3>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" rows="4" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 InsurePredict. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Calculator Page -->
+  <div id="calculator-page" class="hidden">
+    <header class="navbar">
+      <div class="logo">
+        <h1>Insurance Calculator</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="navigateBack()">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Calculate Your Insurance Price</h2>
+        <p>Enter the amount you want to spend and get an estimated insurance amount in ₹.</p>
+      </section>
+
+      <section class="content-section">
+        <form id="calculator-form">
+          <label for="amount">Enter Amount:</label>
+          <input type="number" id="amount" placeholder="Enter amount" required>
+          <button type="button" onclick="calculateInsurance()">Calculate</button>
+        </form>
+        <p id="result" class="result-text"></p>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
